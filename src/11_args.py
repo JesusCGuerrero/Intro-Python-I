@@ -8,7 +8,7 @@
 def f1(num1, num2):
     return num1 + num2
 
-print(f1(1, 2))
+print(f1(1, 2)) # Should print 3
 
 # Write a function f2 that takes any number of integer arguments and returns the
 # sum.
@@ -48,11 +48,16 @@ print(f3(8))     # Should print 9
 # key: baz, value: 12
 #
 # Note: Google "python keyword arguments".
-
+ 
 # YOUR CODE HERE
 
-def f4(a):
-    return 
+# def f4(a, b):
+#     print({
+#         a.: a.values,
+#         b.keys: b.values
+#     })
+def f4(*a, **b):
+    print(f"{a}: {b}")
 
 # Should print
 # key: a, value: 12
@@ -71,4 +76,5 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(d)
+# f4(d.keys(), d.values())
+f4(**d)
